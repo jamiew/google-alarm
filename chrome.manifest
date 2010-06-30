@@ -1,2 +1,2 @@
-content    GoogleAlarm    content/
-overlay    chrome://browser/content/browser.xul    chrome://GoogleAlarm/content/script-compiler-overlay.xul
+content	compileduserscript	content/
+overlay	chrome://browser/content/browser.xul	chrome://compileduserscript/content/script-compiler-overlay.xul
