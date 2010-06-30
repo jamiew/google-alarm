@@ -1,24 +1,20 @@
-# Google Alarm mgmnt via rake
-# Adopted from Scott Kyle's Rakefile
-# http://github.com/appden/appden.github.com/blob/master/Rakefile
+# Google Alarm
 
 task :default => :build
- 
-desc 'Build site'
+
+desc "Build add-on XPI"
 task :build do
-  sh 'rm -f googlealarm.xpi'
-  sh "zip googlealarm.xpi -r chrome content install.rdf" # works on linux + mac
+  sh "rm -f google-alarm.xpi"
+  sh "zip google-alarm.xpi -r chrome chrome.manifest content install.rdf"
 end
 
+desc "Build & open the XPI w/ Firefox (Mac-oriented)"
 task :install => :build do
-  sh 'open -a Firefox googlealarm.xpi' # Mac-oriented
-end
- 
-desc 'Build & deploy'
-task :deploy => :build do
-  # sh 'rsync -rtzh --progress --delete . fffffat@fffff.at:~/fffff.at/google-alarm/'
-  sh 'rsync -rtzh --progress files fffffat@fffff.at:~/fffff.at/files/google-alarm/'
-  sh 'rsync -rtzh --progress *.js *.xpi fffffat@fffff.at:~/fffff.at/files/'
-  #TODO: do something with the XPI as well
+  sh "open -a Firefox google-alarm.xpi"
 end
 
+desc "Build & deploy files to fffff.at"
+task :deploy => :build do
+  sh "rsync -rtzh --progress files fffffat@fffff.at:~/fffff.at/google-alarm/files"
+  sh "rsync -rtzh --progress *.js *.xpi fffffat@fffff.at:~/fffff.at/google-alarm/"
+end
