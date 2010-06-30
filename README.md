@@ -13,10 +13,6 @@ Development
 
 http://github.com/jamiew/google-alarm
 
-Currently this app is pre-release 'alpha' quality
-
-It's also written as a Greasemonkey, but for ease of use 
-will be ported into an addon -- or better yet, a Jetpack
 
 Authors
 -----
