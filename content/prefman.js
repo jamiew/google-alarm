@@ -1,5 +1,5 @@
-function compileduserscript_PrefManager() {
-	var startPoint="compileduserscript.";
+function googlealarm_PrefManager() {
+	var startPoint="googlealarm.";
 
 	var pref=Components.classes["@mozilla.org/preferences-service;1"].
 		getService(Components.interfaces.nsIPrefService).

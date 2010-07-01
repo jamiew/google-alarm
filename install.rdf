@@ -8,7 +8,7 @@
     <em:creator>Jamie Wilkinson</em:creator>
     <em:description>Alerts you when Google is watching!</em:description>
     <em:homepageURL>http://jamiedubs.com/google-alarm</em:homepageURL>
-    <em:iconURL>chrome://compileduserscript/content/icon.png</em:iconURL>
+    <em:iconURL>chrome://googlealarm/content/icon.png</em:iconURL>
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
