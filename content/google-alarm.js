@@ -15,11 +15,11 @@
 */
 
 // Audio sample storage locations
-// Using local www while developing & chrome:// when compiled
-var fileStorage = "http://localhost/google-alarm/files/";
-var soundFiles = fileStorage+'samples/';
+// var fileStorage = "chrome://googlealarm/content";
+var fileStorage = "http://fffff.at/google-alarm/files";
+var soundFiles = fileStorage+'/samples/';
 
-// State storage. TODO refactor into proper hashes
+// State storage. TODO refactor into proper hashes, yeesh
 var findCode = new Array();
 var codeFound = new Array();
 var favIco = new Array();
@@ -42,7 +42,7 @@ favIco[1] = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86A
 soundFound[1] = soundFiles+"airhorn.wav";
 
 // YouTube embeds
-findCode[2] = [ 'youtube.com/v/' ]; // Ghetto - used in <object>/<param>'s
+findCode[2] = [ 'youtube.com/v/' ]; // referenced from object/param tags
 codeFound[2] = 'YouTube embed detected!';
 favIco[2] = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAABJ0lEQVQ4y6VSMUvDQBh9F+PSCumio39BBSmogyCCzrWO7eDs2r2LODg5uBRiC7oFdy0uglSkQ9M5deisQ0Ti0tTncMnZI7XE+JZ73+N97/u4O5Bkt1nl8YZFkiyWGjy/9ZgWUATg20VIAKmbtYBus0oAarpT3yIAlmttNWDyTAR8DG0CYG80Vjxu6I3GvwYYSImzyhLc8Cuhm9PMC8tHcOqXEEKgXGtj1TQQ7uxjbX4OxVJD84porcww0e8Dm9vZujsPEMxZROD/iPmCbgr8pDYBQ2uaYZwdEGN9BWqbwJd1zFu25C0bGA6A+7voDtIgX5Ah3gA4PJCa9/KHgGmBEZIBzg20S33syPrqGjg5BYSQ9dMzsLsnX+H18z3TIos5C4Kuy//8g28JihOoOOV3aAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMC0wMi0wNVQyMjoxNToxNCswMTowMFJYoqIAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMDktMDktMjNUMjA6NTE6MjArMDI6MDCKXDqoAAAAAElFTkSuQmCC';
 soundFound[2] = soundFiles+"laser2.wav";
@@ -63,7 +63,7 @@ for (var i = 0; i < findCode.length; i++) {
   flagFound[i] = false;
 }
 
-// performs the search for the desired search strings
+// See if the page contains any of our search strings
 var x = document.getElementsByTagName("html");
 for(var i = 0; i < findCode.length; i++) {
   for(var j = 0; j < findCode[i].length; j++) {
@@ -79,7 +79,7 @@ for(var i = 0; i < findCode.length; i++) {
 }
 
 // If we matched anything, display our awesome msg + soundz
-// Warning: Google here! The Big GOOG! Watch out!
+// e.g. Warning: Google here! The Big GOOG! Watch out homey! Sup!
 if (anyFound == true) {
 
   // Inject a ghetto javascript fade-function
@@ -111,44 +111,4 @@ if (anyFound == true) {
 		}
 	}
 	ni[0].appendChild(newdiv);
-				
-	
-	// Send results to remote server -- could be interesting for tracking stats, etc.
-	// but I'd only like to do this if its an opt-in thing	
-	/*
-	// build our data string
-  var data = "url="+encodeURI(document.location.href);
-  for (var i = 0; i < findCode.length; i++) {
-		if (flagFound[i] == true) {
-			data += "&site="+encodeURI(codeFound[i]);
-		}
-	}
-	GM_log(data);
-
-  // POST it
-  GM_xmlhttpRequest({
-    method: "POST",
-    url: "http://localhost:4567/",
-    data: data,
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-    onload: function(response) {
-      // if (response.responseText.indexOf("Logged in as") > -1){ location.href = "http://www.example.net/dashboard"; }
-      GM_log([
-        // response.status,
-        response.statusText,
-        // response.readyState,
-        response.responseHeaders,
-        response.responseText,
-        // response.finalUrl,
-        // response.responseXML
-      ].join("\n"));      
-    },
-    onerror: function(response) {
-      GML_log(["Error", respone.status, response.statusText]);
-    }
-  });
-  */
-  	
 }
