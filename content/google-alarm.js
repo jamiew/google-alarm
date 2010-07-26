@@ -126,7 +126,7 @@ if (anyFound == true) {
   var wrapper = document.createElement('div');
   var divIdName = 'google_alarm';
   wrapper.setAttribute('id', divIdName);
-  wrapper.setAttribute('style', 'visibility: visible; opacity: 1; position:absolute; top: 6px; right: 12px; z-index: 666666; font-size: 12px; font-family: sans-serif; font-weight: normal;');
+  wrapper.setAttribute('style', 'visibility: visible !important; opacity: 1; position:absolute; top: 6px; right: 12px; z-index: 666666; font-size: 12px !important; font-family: sans-serif !important; font-weight: normal !important;');
 
   var defaultTimeout = 2500;
   var timeoutLag = 250; // b/w fadeouts
@@ -138,7 +138,7 @@ if (anyFound == true) {
   var top = document.createElement('div');
   var topID = divIdName+'_top';
   top.setAttribute('id', topID);
-  top.setAttribute('style', growlStyle+'text-align: center; font-size: 98%; color:#fff; background-color: #ff0000;');
+  top.setAttribute('style', growlStyle+'text-align: center; font-size: 98% !important; color:#fff !important; background-color: #ff0000 !important;');
   top.innerHTML = top.innerHTML + '<img style="position: absolute; margin-top: -2px; margin-left: -90px;" src="'+googleLogo+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: -20px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: 5px;" src="'+animatedSiren+'" />';
