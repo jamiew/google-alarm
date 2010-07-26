@@ -20,7 +20,7 @@ var soundEnabled = false;
 // Audio sample storage locations
 // var fileStorage = "chrome://googlealarm/content";
 // var fileStorage = "http://fffff.at/google-alarm/files";
-var fileStorage = "http://localhost/googlealarm/files";
+var fileStorage = "http://localhost/googlealarm/content";
 var soundFiles = fileStorage+'/samples/';
 
 // State storage. TODO refactor into proper hashes, yeesh
