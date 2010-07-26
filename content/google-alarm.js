@@ -38,7 +38,8 @@ if(viewport['width'] <= 300 || viewport['height'] <= 300){
 }
 
 // Initialize site-type counters
-if(false){
+// Reset if you add "?reset_googlealarm=1" to any URL
+if(document.location.href.toLowerCase().indexOf('?reset_googlealarm=1') != -1){
   GM_deleteValue('googlealarm_total');
   GM_deleteValue('googlealarm_hits');
 }
@@ -132,11 +133,11 @@ if (anyFound == true) {
   var topID = divIdName+'_top';
   top.setAttribute('id', topID);
   // bg WAS f05050
-  top.setAttribute('style', growlStyle+'font-size: 95%; color:#fff; background: #ff0000 url('+fileStorage+'/images/google-logo-redmatte-og.png) 8px 7px no-repeat;');
-  top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: 70px;" src="'+fileStorage+'/images/animated-siren.gif" />';
-  top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: 100px;" src="'+fileStorage+'/images/animated-siren.gif" />';
-  top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: 130px;" src="'+fileStorage+'/images/animated-siren.gif" />';
-  top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 25px;">'+websiteCounters['hits']+" / "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
+  top.setAttribute('style', growlStyle+'text-align: center; font-size: 98%; color:#fff; background: #ff0000 url('+fileStorage+'/images/google-logo-redmatte-og.png) 8px 7px no-repeat;');
+  top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: -10px;" src="'+fileStorage+'/images/animated-siren.gif" />';
+  top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: 20px;" src="'+fileStorage+'/images/animated-siren.gif" />';
+  top.innerHTML = top.innerHTML + '<img height="32" style="position: absolute; margin-top: -8px; margin-left: 50px;" src="'+fileStorage+'/images/animated-siren.gif" />';
+  top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 25px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
   top.innerHTML = top.innerHTML + '<script type="text/javascript">setTimeout("fadeOut(\''+topID+'\')", '+defaultTimeout+');</script>';
   wrapper.appendChild(top);
 
