@@ -44,7 +44,7 @@ a img { border: 0; }
 #nav a {
   opacity: 0.4;
   -moz-border-radius: 6px;
-  font-size: 11pt;
+  font-size: 9pt;
   background-color: #000;
   color: #fff;
   margin-top: 10px;
@@ -84,6 +84,17 @@ a img { border: 0; }
 /*  float: right;*/
   margin: 20px auto;
   padding: 20px 30px 10px;
+}
+
+
+#screeenshots {
+  width: 800px;
+  margin: 0 auto;
+}
+#screenshots img {
+  width: 100%;
+  border: 1px solid black;
+  margin: 10px 0;
 }
 
 
