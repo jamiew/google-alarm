@@ -77,8 +77,8 @@ h2#byline { margin-bottom: 20px; }
 /* Custom page elements */
 
 #description {
-  font-size: 110%;
-  padding: 10px 100px 15px 80px;
+  font-size: 115%;
+  padding: 10px 50px 15px 0px;
   border: 1px solid #efefef;
   border-left: 0;
   border-right: 0;
