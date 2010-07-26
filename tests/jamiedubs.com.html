@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+  ____  ___    __ __  ____    _____
+ |    ||   \  |  T  T|    \  / ___/
+ l__  ||    \ |  |  ||  o  )(   \_ 
+ __j  ||  D  Y|  |  ||     T \__  T
+/  |  ||     ||  :  ||  O  | /  \ |
+\  `  ||     |l     ||     | \    |
+ \____jl_____j \__,_jl_____j  \___j
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+
+  <title>Jamie Wilkinson &mdash; Internet Science</title>
+
+
+	
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Jamie Wilkinson"/>
+  
+  <!-- TODO: meta description and keywords go here -->
+  
+
+  <link rel="stylesheet" href="http://jamiedubs.com/textpattern/css.php?n=default" type="text/css" />
+  <link rel="shortcut icon" href="/favicon.gif" type="image/gif">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://jamiedubs.com/rss/" />
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://jamiedubs.com/atom/" />
+
+  <link rel="openid.server" href="http://openid.claimid.com/server" />
+  <link rel="openid.delegate" href="http://openid.claimid.com/jamiew" />
+
+  <script type="text/javascript" src="/javascript/jquery-latest.js"></script>
+  <script type="text/javascript" src="/javascript/jquery.iepng.js"></script>
+  <script type="text/javascript" src="/javascript/jquery.ui-1.0.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    // break out of frames from Google Image Search, spammers, et al
+    if (top.location != self.location) top.location = self.location;
+
+$(document).ready(function(){
+  // IE sux; fix their pngs
+  $('img[@src$=.png]').pngfix();
+
+  // magnifier
+  $('#bling').magnifier({ 
+    //baseline: -1,
+    magnification: 2,
+    opacity: {max: 1, min: .9},
+    //distance: 100,
+    //zIndex: 1000,
+    overlap: true	
+  });
+});
+  </script>
+</head>                                          
+
+<body id="default">
+
+<div id="container">
+
+  <!-- head -->
+  <div id="head">
+  </div>
+
+	<!-- left -->
+	<div id="left">
+	  <div id="navigation">
+	  <!-- navigation -->
+	  </div>  
+	</div>
+	<!-- / left -->
+
+
+<marquee id="famo-ticker">
+* &nbsp; \ &nbsp; & &nbsp; &copy; &nbsp; | &nbsp; / &nbsp; * * &nbsp; \ &nbsp; & &nbsp; &copy; &nbsp; | &nbsp; / &nbsp; * * &nbsp; \ &nbsp; & &nbsp; &copy; &nbsp; | &nbsp; / &nbsp; * * &nbsp; \ &nbsp; & &nbsp; &copy; &nbsp; | &nbsp; / &nbsp; * * &nbsp; \ &nbsp; & &nbsp; &copy; &nbsp; | &nbsp; / &nbsp; * 
+</script>
+</marquee>
+
+<!--
+<div id="header">
+  Jamie Wilkinson: 
+  <strong><script type="text/javascript">document.write('<a href="mailto:&#106;&#097;&#109;&#105;&#101;&#064;&#105;&#110;&#116;&#101;&#114;&#110;&#101;&#116;&#102;&#097;&#109;&#111;&#046;&#117;&#115;">e-mail</a>');</script></strong> / 
+<a href="http://jamiew.tumblr.com" rel="me">tumblr</a>  /
+<a href="http://del.icio.us/jamiew" rel="me">del.icio.us</a> / 
+<a href="http://twitter.com/jamiew" rel="me">twitter</a> /
+<a href="http://vimeo.com/jamiew" rel="me">vimeo</a> /
+<a href="http://github.com/jamiew" rel="me">github</a> /
+<a href="http://last.fm/jamiew" rel="me">last.fm</a> /
+<a href="http://www.linkedin.com/in/jamiewilkinson" rel="me">linkedin</a> / 
+<a href="http://friendfeed.com/jamiew" rel="me">friendFeed</a>
+</div>
+-->
+
+<div id="masthead">
+   <a href="/"><img src="/images/sunburst-01-small2.gif" alt="" border="0" /></a>
+</div> <!-- /#masthead -->
+
+
+
+<div id="center">
+
+  <!-- right (inside center now) -->
+  <div id="right">
+  
+    
+
+      
+
+    <div id="bio">
+    <img src="http://jamiedubs.com/fuckflickr/data/secret/man-himself/thumb/jamie-headshot.jpg" alt="" title="Jamie Wilkinson" width="100" />
+
+    <strong>Jamie Wilkinson</strong><br />
+    <small>
+<p>I'm a member of the copyleft <a href="http://fffff.at">FAT Lab</a> and lead R&D at Rocketboom, where I've created <a href="http://knowyourmeme.com">Know Your Meme</a> and <a href="http://mag.ma">Mag.ma</a>
+
+<p>I also teach the <a href="http://internetfamo.us">Internet Famous Class</a> at <a href="http://parson.edu">Parsons</a>, where your grade depends on your online popularity.
+
+<p>Selected press:
+ <img src="/images/favicon-nbc.gif" width="12"><a href="http://video.wnbc.com/player/?id=219891">NBC</a>,
+ <img src="/images/favicon-time.gif" width="8"> <a href="http://www.time.com/time/business/article/0,8599,1697486,00.html">TIME</a>&nbsp;<a href="http://www.time.com/time/specials/packages/article/0,28804,1918031_1918016_1918014,00.html">[2]</a>,
+ 
+<br />
+<img src="http://current.com/favicon.ico" width="12">&nbsp;<a href="http://current.com/items/89780332/internet_famous_class.htm">CurrentTV</a>,
+ <img src="/images/favicon-gawker.ico" width="10"><a href="http://gawker.com/5003403/art-schools-julia-allison-training-program">Gawker</a>, 
+ <img src="http://mashable.com/favicon.ico" width="12" />&nbsp;<a href="http://mashable.com/2009/08/25/magma/">Mashable</a>,
+ <img src="http://techcrunch.com/favicon.ico" width="12" />&nbsp;<a href="http://www.techcrunch.com/2009/08/25/magma-unleashes-its-directory-of-hot-video-content-to-the-masses/">TechCrunch</a>,
+ <img src="/images/favicon-buzzfeed.gif" width="8"> <a href="http://buzzfeed.com/link/Internet_Famous/internet_famous_class_the_official_website_get_the_syllabus_grade">BuzzFeed</a>
+, 
+ <a href="http://jamiedubs.com/artwikimarathon-in-artnews-april-2008">ArtNews</a>
+
+</p>
+
+
+<br />
+     <!--<p>&rarr; <a href="/about">More info</a>-->
+
+     <p><big><script type="text/javascript">document.write('&rarr; <a href="mailto:&#106;&#097;&#109;&#105;&#101;&#064;&#105;&#110;&#116;&#101;&#114;&#110;&#101;&#116;&#102;&#097;&#109;&#111;&#046;&#117;&#115;">Email me</a>');</script></big></p>
+
+I blog on <a href="http://jamiew.tumblr.com" rel="me"><img src="http://jamiedubs.com/images/icons/services/tumblr.png" height="14" /> Tumblr</a><br />
+update on <a href="http://twitter.com/jamiew" rel="me"><img src="http://jamiedubs.com/images/icons/services/twitter.png" height="14" /> Twitter</a><br />
+videos on <a href="http://vimeo.com/jamiew" rel="me"><img src="http://vimeo.com/favicon.ico" height="14" /> Vimeo</a><br />
+photos on <a href="http://flickr.com/photos/jmw/" rel="me"><img src="http://jamiedubs.com/images/icons/services/flickr.png" height="14"> Flickr</a><br />
+code on <a href="http://github.com/jamiew" rel="me"><img src="http://github.com/favicon.ico" height="14" /> GitHub</a><br />
+bookmarks <a href="http://del.icio.us/jamiew" rel="me"><img src="http://jamiedubs.com/images/icons/services/delicious.png" height="14"> del.icio.us</a><br />
+<!-- music on <a href="http://last.fm/user/jamiew" rel="me"><img src="http://jamiedubs.com/images/icons/services/lastfm.png" height="14"> Last.fm</a>,<br /> -->
+<!-- business on <a href="http://www.linkedin.com/in/jamiewilkinson" rel="me"><img src="http://jamiedubs.com/images/icons/services/linkedin.png" height="14"> LinkedIn</a>,<br /> -->
+write for <a href="http://en.wikipedia.org/wiki/User:Jamiew" rel="me"><img src="http://jamiedubs.com/images/icons/services/wikipedia.png" height="14">ikipedia</a>
+
+<br /><br />
+
+    </small>
+    </div> <!-- #bio -->
+ 
+    <br />
+    <!-- projects -->
+    <h3>Projects</h3>
+    <!-- projects -->
+<div id="nav-wrapper">      
+
+<!-- NEW! --><!--
+<em style="color: #f55; font-size: 90%;">&nbsp;new!&nbsp;</em> 
+-->
+
+<ul class="nav sub-nav">
+
+	<!-- ############### -->
+  <li class="nav-title nav-spacer">2009</li>
+  
+  <li><a href="http://fffff.at/kanye-rant-detector/">Kanye Rant Detector</a>
+  	<span>alerts whenever Kanye rants on his blog; part of FAT <a href="http://fffff.at/tag/kanyewebst" style="padding: 0; font-weight: normal; margin: 0; background: transparent;">Kanye Week</a></span></li>
+  
+	<!-- FATbot... -->
+	<!-- powerleveler... -->
+	
+  <li><a href="http://knowyourmeme.com">Know Your Meme</a> 
+		<span>documenting Internet phenomena: viral videos, image macros, web celebs & more <em>(ongoing)</em></span></li>
+  
+  <li><a href="http://jamiedubs.com/wikiswarm-visualize-wikipedia-page-histories" border="0">Wikiswarm</a> 
+  	<span>visualize Wikipedia page histories and user contributions</span></li>
+
+	<!-- Zombie McCain? -->
+
+  <li><a href="http://jamiedubs.com/meme-breaks/">Meme Breaks</a> 
+		<span>all your favorite Internet samples in DJ-friendly format</span></li>
+
+	<li><a href="http://artzilla.org">Artzilla</a>
+			<span>dedicated to the development of experimental browser software.</span></li>
+
+	<!-- ############### -->
+  <li class="nav-title nav-spacer">2008</li>
+
+  <li><a href="http://internetfamo.us">Internet Famous Class</a>
+		<span>the first algorithmically graded class in the history of academics</span></li>
+
+  <li><a href="http://fffff.at/inbox-victory">Inbox Victory</a> <a href="http://fffff.at/fuckflickr/inbox-victory">[2]</a> 
+		<span>conquer your email, capture the moment</span></li>
+
+  <li><a href="http://add-art.org">Add-Art</a>
+		<span>Firefox extension replaces online ads with art</span></li>
+
+  <li><a href="http://fuckflickr.com">FuckFlickr</a>
+		<span> narc-free image gallery software</span></li>
+
+  <li><a href="http://rickrolldb.com">Rickroll Database</a>
+		<span> never get rickroll'd again</span></li>
+
+  <li><a href="/rss-feed-of-your-tumblr-dashboard">Tumblr RSS scraper</a>
+		<span>generate a feed for your Tumblr dashboard</span></li>
+
+  <!-- <li><a href="/scrape-myspace-youtube-torrents-for-fun-and-profit">Web Scraping 101</a><span> how to collect data from MySpace and YouTube using Ruby & Mechanize</span></li> -->
+
+  <li><a href="http://jamiedubs.com/internet-delay-pedal">Internet Delay Pedal</a> <span>time travelling technology for adventurous web surfers</span></li>
+
+  <!-- <li><a href="http://thegreatintern.net/wikimarathon/">The Great Art Wiki Marathon</a>
+		<span>24 hours of adding art knowledge to Wikipedia</span></li> -->
+
+  <!--<li><a href="http://storybored.org">StoryBored</a><span> email imageboards for cool kids</span></li>-->
+
+	<!-- ############### -->
+  <li class="nav-title nav-spacer">2007</li>
+  
+  <li><a href="http://code.google.com/p/hydraproject/">Hydra Torrent Tracker</a><span> anonymous, distributed BitTorrent tracker</span></li>
+
+  <li><a href="http://musicblackhole.com">Music Blackhole</a><span>music server that sucked in so many dope tunes that it collapsed under its own weight</span></li>
+
+  <li><a href="http://tramchase.com/filemarks-save-files-to-your-iphone">FileMarks</a><span> store eBooks & hi-res images on your iPhone</span></li>
+
+  <li><a href="http://jamiedubs.com/ps1-collection-customize-your-bash-prompt">Terminal Prompts <span><img src="http://jamiedubs.com/images/20.png" alt="a fairly sweet terminal prompt" style="opacity: 0.6;" /></span></a></li>
+
+  <li><a href="/hard-drive-detonator-001">Hard Drive Bombs</a><span>always be prepared</span></li>
+
+	<!-- ############### -->
+  <li class="nav-title nav-spacer">2006</li>
+
+  <li><a href="/jtunnel">jtunnel</a> <span>firewall circumvention & traffic anonymization</span></a></li>
+
+  <!--<li><a href="/projects/cyberdissidence">Cyberdissidence Toolkit</a> <span>unfettered, untraceable access to information</span></li>-->
+
+  <!--<li class="nav-title nav-spacer">music</li>-->
+
+  <!--<li><a id="ptricks-link" href="http://ptricks.net/podcast" title="Hip-hop, dance music and breakbeats mixed & scratched">Politricks Podcast</a><span> hip-hop, dance music and breakbeats</span></li>-->
+
+  <!--<li><a href="http://fffff.at/serious-business">Serious Bu$iness</a><span> disco lazer DJ crew</span></li>-->
+
+  <li><a href="http://wnyu.org">WNYU Archives</a><span>89.1FM on-demand</span></li>
+
+	<!--  -->
+  <li class="nav-title nav-spacer">2005</li>
+
+  <li><a href="http://www.yelp.com/biz/emergency-arts-new-york">Emergency Arts</a> <span>abandoned Chelsea factory converted artist's studio & gallery space</span></li>
+
+  <li><a href="http://mediumnyc.com">Medium NYC</a> <span>student arts organization</span></li>
+
+</ul>
+
+
+</div> <!-- /#nav-wrapper -->
+
+
+
+    <br class="clear" /><br />
+    Search: <form action="http://jamiedubs.com/search/" method="get"><p><input type="text" name="q" value="" size="15" /></p></form><br />
+
+    <h4>
+      <big>
+      <a class="rss_link" href="http://jamiedubs.com/rss"><img src="/images/feed-pill-whitebg.gif" style="width: 64px;" alt="jamiew's blog RSS feed" /></a>
+      </big>
+    </h4>
+
+  </div> <!-- /#right -->
+	      
+	      
+  
+ 
+
+
+  
+
+    
+      <!-- tumblr is where the hotness goes -->
+      <h4 id="tumblr-link">
+      <a class="rss_link" href="http://jamiew.tumblr.com/"><img src="/favicon.gif" /></a>
+      <a href="http://jamiew.tumblr.com/">jamiew.tumblr.com</a> <span style="font-family: sans-serif; font-weight: normal;">
+<br />fresh daily internets</span>      
+      </h4>
+
+<!--<div id="tumblr">
+<script type="text/javascript" src="http://jamiew.tumblr.com/js?num=5"></script>
+</div>-->
+
+
+<!--<br /><strong style="margin-left: 80px;">Videos</strong>-->
+
+<!--
+<div id="fuckflickr">
+<p><em style="text-transform: uppercase; font-size: 110%; font-family: 'Century Gothic', sans-serif;">
+	<a href="http://jamiedubs.com/fuckflickr/">my fuckflickr</a>
+</em>
+<p>
+<a href="http://jamiedubs.com/fuckflickr/impressionist-me-now-me/"><img height="90" src="http://jamiedubs.com/fuckflickr/data/impressionist-me-now-me/thumb/jamiedubs-impressionist-me-now-me.jpg" alt="Impressionist Me, Now Me" title="Impressionist Me, Now Me" border="0" /></a>
+<a href="http://jamiedubs.com/fuckflickr/meme-prints/#dramatic-chipmunk.gif"><img height="90" src="http://jamiedubs.com/fuckflickr/data/meme-prints/thumb/dramatic-chipmunk.gif" alt="Meme Prints" title="Meme Prints" border="0" /></a>
+<a href="http://fffff.at/fuckflickr/zombie-nation/"><img height="90" src="http://data.tumblr.com/BTY54d2GDf57j71lS7Ob0lFwo1_r1_500.jpg" alt="Zombie Nation" title="Zombie Nation" border="0" /></a>
+</div>
+-->
+
+
+
+  <!-- ********* ********** ******** -->
+  <p><em style="text-transform: uppercase; font-size: 110%; font-family: 'Century Gothic', sans-serif;">Project news</em> <a href="/rss"><img src="/images/feed-gradiated.png" /></a>
+
+    
+      <!-- not frontpage -->
+    
+    <div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/firefox-extension-to-fix-the-new-facebook-design" title="Permanent link to this article">Firefox extension to fix the new Facebook&#160;design</a></h3>	
+
+
+  
+    	<p>I had a few issues with the <a href="http://www.new.facebook.com">new Facebook design</a>, so I created a Firefox extension to make it more readable (and remove all the ads). See the before and after screenshots below.</p>
+
+	<p><big>&raquo; <a href="http://tramchase.com/files/fix-new-facebook.xpi">Click to install &#8216;Fix New Facebook&#8217;</a><br />
+</big> (hassle-free!)</p>
+
+	<p><em>Before</em><br />
+<a href="http://tramchase.com/fuckflickr/data/fix-new-facebook/facebook-before.png"><img src="http://tramchase.com/fuckflickr/data/fix-new-facebook/thumb/facebook-before.png" alt="Before Fix New Facebook" title="Before Fix New Facebook" border="0" /></a></p>
+
+	<p><em>The changes&#8230;</em><br />
+<a href="http://tramchase.com/fuckflickr/data/fix-new-facebook/facebook-mods.png"><img src="http://tramchase.com/fuckflickr/data/fix-new-facebook/thumb/facebook-mods.png" alt="Plan for fixing the new Facebook" title="Plan for fixing the new Facebook..." border="0" /></a></p>
+
+	<p><em>After</em><br />
+<a href="http://tramchase.com/fuckflickr/data/fix-new-facebook/facebook-after.png"><img src="http://tramchase.com/fuckflickr/data/fix-new-facebook/thumb/facebook-after.png" alt="After Fix New Facebook" title="After Fix New Facebook" border="0" /></a></p>
+
+	<p><br />
+
+The extension is simply a compiled <a href="http://greasemonkey.org">Greasemonkey</a> userscript that adds a few <span class="caps">CSS</span> styles &rarr; <a href="http://tramchase.com/files/fix-new-facebook.user.js">fix-new-facebook.user.js</a></p>
+
+
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/facebook/" rel="tag">facebook</a>, 
+<a href="http://jamiedubs.com/tag/firefox/" rel="tag">firefox</a>, 
+<a href="http://jamiedubs.com/tag/greasemonkey/" rel="tag">greasemonkey</a>, 
+<a href="http://jamiedubs.com/tag/hacks/" rel="tag">hacks</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/firefox-extension-to-fix-the-new-facebook-design" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/firefox-extension-to-fix-the-new-facebook-design#comment"  class="comments_invite">Comment on this</a> [3]</span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/roflmaobbq-and-other-internet-tshirts" title="Permanent link to this article">ROFLMAOBBQ &#38; other Internets t-shirts</a></h3>	
+
+
+  
+    	<p><a href="http://fat.spreadshirt.com/us/US/Shop/Article/Index/article/ROFLMAOBBQ-3123240" title="ROFLMAOBBQ T-shirt"><img src="http://fffff.at/fuckflickr/data/4SALE/roflmaobbq.jpg" alt="ROFLMAOBBQ T-shirt" title="ROFLMAOBBQ T-shirt"></a></p>
+
+	<p>&#8220;For when <span class="caps">LOL</span> just doesn&#8217;t cut it.&#8221;</p>
+
+	<p>Printed on high-quality <em>Apparelle Americaine</em> from the <a href="http://fat.spreadshirt.com"><span class="caps">FFFFF</span>.AT T-shirt Shoppe</a> </p></p>
+
+	<p>One in my ongoing series of internets t-shirts. See also:</p>
+
+	<p><a href="http://146039.spreadshirt.com/us/US/Shop/Article/Index/article/Its-Fun-To-Do-Bad-Things-3031766"><img src="http://cache.spreadshirt.com/users/397000/396412/products/396412_3408055_1_big.jpg" class="noborder" /></a><br />
+It&#8217;s Fun To Do Bad Things</p>
+
+	<p><a href="http://146039.spreadshirt.com/us/US/Shop/Article/Index/article/Cheezburglar-2864090"><img src="http://cache.spreadshirt.com/users/397000/396412/products/396412_3218028_1_big.jpg" class="noborder" /></a><br />
+I Can Has Cheezburglar</p>
+
+	<p><a href="http://146039.spreadshirt.com/us/US/Shop/Article/Index/article/ORLY-2864154"><img src="http://cache.spreadshirt.com/users/397000/396412/products/396412_3218178_1_big.jpg" class="noborder" /></a><br />
+O RLY?</p>
+
+	<p><small><em>x-posted from <a href="http://fffff.at/roflmaobbq">fffff.at</a></em></small></p>
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/art/" rel="tag">art</a>, 
+<a href="http://jamiedubs.com/tag/internet/" rel="tag">internet</a>, 
+<a href="http://jamiedubs.com/tag/lols/" rel="tag">lols</a>, 
+<a href="http://jamiedubs.com/tag/tshirt/" rel="tag">tshirt</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/roflmaobbq-and-other-internet-tshirts" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/roflmaobbq-and-other-internet-tshirts#comment"  class="comments_invite">Comment on this</a></span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/add-art-replace-ads-with-art" title="Permanent link to this article">Add-Art is out! Replace online ads with&#160;art</a></h3>	
+
+
+  
+    	<p><a href="http://add-art.org" title="Add-Art in action"><img src="http://add-art.org/files/images/addart-demo.gif" width="420" alt="Add-art in action!" /></a></p>
+
+	<p><a href="http://add-art.org"><strong>Add-Art</strong></a> is a new Firefox extension which replaces online advertising with art. A new show is released every 2 weeks. </p>
+
+	<p>Our first show are Hiroshige prints selected by the Asian art curators at the Brooklyn Museum, here&#8217;s a sample:</p>
+
+	<p><img src="http://www.brooklynmuseum.org/community/blogosphere/bloggers/wp-content/uploads/Shelley/30.1478.30_PS1.jpg" alt="30.1478.30_PS1.jpg" align="middle" border="0" height="150" width="98"><img src="http://www.brooklynmuseum.org/community/blogosphere/bloggers/wp-content/uploads/Shelley/30.1478.56_PS1.jpg" alt="30.1478.56_PS1.jpg" align="middle" border="0" height="150" width="98"></a><img src="http://www.brooklynmuseum.org/community/blogosphere/bloggers/wp-content/uploads/Shelley/30.1478.58_PS1.jpg" alt="30.1478.58_PS1.jpg" align="middle" border="0" height="148" width="100"> <img src="http://www.brooklynmuseum.org/community/blogosphere/bloggers/wp-content/uploads/Shelley/30.1478.64_PS1.jpg" alt="30.1478.64_PS1.jpg" align="middle" border="0" height="150" width="98"></p>
+
+	<ul>
+		<li><a href="http://add-art.org/extension/addart.xpi"><strong>Click here to install Add-Art!</strong></a> </li>
+		<li>more info:  <a href="http://add-art.org">add-art.org</a>.</li>
+	</ul>
+
+	<p>If you like the project please show some support! Vote for us on  <a href="http://digg.com/software/Add_Art_released_replace_adverts_with_art">Digg</a> or <a href="http://reddit.com/info/6k3ja/comments/">Reddit</a>, or consider volunteering to <a href="http://add-art.org/content/contribute">curate a show</a>. </p>
+
+	<p>The code-inclined should check out the project page on <a href="http://dev.eyebeam.org/projects/add-art/wiki/Add-Art">dev.eyebeam.org</a> and sign up for the <a href="http://dev.eyebeam.org/projects/add-art/wiki/mailing%20list">mailing list</a>. The team is really great and we&#8217;re looking forward to future development!</p>
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/advertising/" rel="tag">advertising</a>, 
+<a href="http://jamiedubs.com/tag/art/" rel="tag">art</a>, 
+<a href="http://jamiedubs.com/tag/extensions/" rel="tag">extensions</a>, 
+<a href="http://jamiedubs.com/tag/firefox/" rel="tag">firefox</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/add-art-replace-ads-with-art" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"></span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/fuck-flickr-host-your-own" title="Permanent link to this article">Fuck Flickr, host your&#160;own</a></h3>	
+
+
+  
+    <img src="http://fffff.at/fuckflickr/data/LASER_TAG/web/P1050414.JPG" alt="P1050414" title="P1050414" width="440" border="0"></p>
+
+<p><a href="http://www.cpj.org/awards05/shi_tao.html">Shi Tao</a> is serving a 10-year sentence in prison for writing articles calling for political reform in China. <a href="http://news.bbc.co.uk/1/hi/world/asia-pacific/4221538.stm">Yahoo helped put him there</a>.</p>
+
+<p><a href="http://fffff.at/fuckflickr">FuckFlickr</a> is open-source image gallery software that won’t narc you out. We created it as an alternative to hosting your photos on a certain Yahoo-owned photo sharing site.</p>
+
+<p><big><img src="http://www.lat-mpi.eu/tools/imdi/download-icon" width="16"> <a href="http://fffff.at/download/fuckflickr-2-0.zip" title="YESSIR CLICK THIS ONE HERE">Download FuckFlickr 2.0</a> (PHP, 268kb .zip)</big></p>
+
+<p>&raquo; <strong><a href="http://fffff.at/fuckflickr-info">More info on fffff.at</a></strong>: installation instructions, videos, etc.</p>
+
+<p>&raquo; Code repository: <code>http://tramchase.com/svn/fuckflickr/trunk</code><br />
+&raquo; Development info on <a href="http://dev.fffff.at/projects/fuckflickr">dev.fffff.at</a></p>
+
+<em><a href="http://fffff.at/fuck-flickr-yahoo-is-a-narc/" rel="bookmark" title="Permanent Link to Fuck Flickr, Yahoo is a narc">Yahoo is a narc</a></em>. <p>A <a href="http://fffff.at/">F.A.T. Lab</a> production</p>.
+  
+	
+  <div class="article_metadata">
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/fuck-flickr-host-your-own" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/fuck-flickr-host-your-own#comment"  class="comments_invite">Comment on this</a></span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/artwikimarathon-in-artnews-april-2008" title="Permanent link to this article">ArtWikiMarathon in ArtNews Magazine, April&#160;2008</a></h3>	
+
+
+  
+    	<p><img src="http://visitsteve.com/wp-content/uploads/2008/04/artnews-cover.jpg" alt="Artnews April 2008" title="ArtNews April 2008" width="284"></p>
+
+	<p>Lamar Clarkson of <a href="http://artnews.com">ArtNews Magazine</a> wrote about <a href="http://thegreatinter.net/wikimarathon/">The Great Internet Art Wiki Marathon</a> that went down on January 26, 2008. We had several dozen participants from all over the world, hundreds of edits, and tons of fun! Marathon #2 is coming up <strong>this Saturday, April 26th,</strong> <a href="http://thegreatinter.net/wikimarathon/">save the date</a>.</p>
+
+<p><strong>Article scan:</strong> (thx <a href="http://visitsteve.com/news/artnews-magazine-on-wikimarathon/">Steve</a>)<br />
+
+<a href="http://visitsteve.com/wp-content/uploads/2008/04/artnews-story.jpg"><img src="http://visitsteve.com/wp-content/uploads/2008/04/artnews-story-150x150.jpg" alt="by Lamar Clarkson - April 2008" title="ArtNews WikiMarathon Story" class="alignnone size-thumbnail wp-image-454" height="150" width="150"></a></p>
+
+	<p><strong>Transcript:</strong><blockquote><strong><span class="caps">WIKI</span> <span class="caps">BUSINESS</span></strong>: &#8220;If it&#8217;s not on the Internet, it doesn&#8217;t exist,&#8221; Irene Polnyi said as she clicked through gallery Websites, looking for information about William Powhida&#8217;s large-scale drawings to add to the Wikipedia page she was creating for him. &#8220;He&#8217;s one of my favorite contemporary artists,&#8221; she added. &#8220;He recently became my friend on Facebook.&#8221;</p>
+
+	<p>Polnyi was one of dozens of people around the world participating in the <a href="http://thegreatinter.net/wikimarathon">Art Wikimarathon</a>, a daylong effort to increase the visibility of contemporary art on the popular website Web encyclopedia, which anyone can edit. The online event, organized by artists <a href="http://visitsteve.com">Steve Lambert</a> and <a href="http://collectivefoundation.org">Joseph del Pesco</a>, drew art enthusiasts from Malta to Marfa, Texas. Marathoners armed with laptops gathered at artists&#8217; homes, at bagel joints, and at <a href="http://eyebeam.org">Eyebeam</a>, the experimental art & technology center in New York where Lambert is a senior fellow. Altogether, the groups made nearly 100 edits by the end of the day. They kept in contact via an instant-message group chat, which dinged every few seconds with tips, links, and chatter.</p>
+
+	<p>Despite Wikipedia&#8217;s reputation for sloppiness and amateurism (contributors must cite sources but needn&#8217;t vet them), the site is often a first reference for Web users. As a result, artists without a Wikipedia presence might suffer, said video and performance artist <a href="http://www.marisaolson.com/">Marrisa Olson</a>. &#8220;I&#8217;ve actually heard people dis artists by saying, &#8216;He doesn&#8217;t even have his own Wikipedia page,&#8217;&#8221; she told <em>ART-news</em> in an e-mail.</p>
+
+	<p>Lambert hopes that people will continue contributing entries and says he may organize another marathon. Among the new entries logged that day were the 1990s Australian cyberfeminist collective <span class="caps">VNS</span> Matrix and a catchall page on the Bay Area art scene. Because Wikipedia forbids article subjects from editing their own entries, the artists confined themselves to starting pages for their friends &#8212; also verboten, but as one participant told the chat group, &#8220;I think they mean, &#8216;Don&#8217;t make pages for your nonfamous friends.&#8217;&#8221;<br />
+</blockquote></p>
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/artwikimarathon/" rel="tag">artwikimarathon</a>, 
+<a href="http://jamiedubs.com/tag/press/" rel="tag">press</a>, 
+<a href="http://jamiedubs.com/tag/wikipedia/" rel="tag">wikipedia</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/artwikimarathon-in-artnews-april-2008" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/artwikimarathon-in-artnews-april-2008#comment"  class="comments_invite">Comment on this</a> [2]</span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/interview-airing-on-pop17-today" title="Permanent link to this article">Famo Interview on&#160;Pop17</a></h3>	
+
+
+  
+    	<p><strong>Update:</strong> also on Gawker: <em><a href="http://gawker.com/5003403/art-schools-julia-allison-training-program">Celebrity-industrial Complex: Art School&#8217;s Julia Allison Training Program</a></em></p>
+
+	<p>Sarah Meyers from new videoblog <a href="http://pop17.com">Pop17</a> interviewed me about the <a href="http://internetfamo.us">Internet Famous class</a> on her show today: <a href="http://pop17.com/videos/grading-students-on-internet-fame"><strong>link</strong></a></p>
+
+	<p><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="437" height="370" id="viddler"><param name="movie" value="http://www.viddler.com/player/2c07e1a4/" /><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="true" /><embed src="http://www.viddler.com/player/2c07e1a4/" width="437" height="370" type="application/x-shockwave-flash" allowScriptAccess="always" allowFullScreen="true" name="viddler" ></embed></object></p>
+
+	<p>Pop17 was dropped on <a href="http://techcrunch.com">TechCrunch</a> yesterday so tertiary famo should be good. Interview got some reblog love, too, my favorite is <a href="http://www.wearesuperfamous.com/?p=298">&#8216;wearesuperfamous.com&#8217;</a></p>
+  
+	
+  <div class="article_metadata">
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/interview-airing-on-pop17-today" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/interview-airing-on-pop17-today#comment"  class="comments_invite">Comment on this</a> [1]</span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/mixtape-live-dangerous-savalas-1-30-08" title="Permanent link to this article">Mixtape: Live &#38; Dangerous, Savalas 1-30-08</a></h3>	
+
+
+  
+     <a href="http://tramchase.com/audio/jdubs-savalas-1-31-08.mp3"><img border="0" src="/images/savalas-livendangerous.png" alt="" width="320" title"O_o" /></a><br />
+
+<strong><a href="http://tramchase.com/audio/jdubs-savalas-1-31-08.mp3">download free MP3</a></strong>
+
+	<p><p><object type="application/x-shockwave-flash" data="http://fffff.at/wp-content/plugins/audio-player/player.swf" width="290" height="24" id="audioplayer1"><param name="movie" value="http://fffff.at/wp-content/plugins/audio-player/player.swf" /><param name="FlashVars" value="playerID=1&amp;bg=0xfff000&amp;leftbg=0xeeeeee&amp;lefticon=0x666666&amp;rightbg=0xcccccc&amp;rightbghover=0x999999&amp;righticon=0x666666&amp;righticonhover=0xffffff&amp;text=0x666666&amp;slider=0x666666&amp;track=0xFFFFFF&amp;border=0x666666&amp;loader=0xff00ff&amp;soundFile=http%3A%2F%2Ftramchase.com%2Faudio%2Fjdubs-savalas-1-31-08.mp3" /><param name="quality" value="high" /><param name="menu" value="false" /><param name="bgcolor" value="#FFFFFF" /></object></li></p>
+
+	<p>My set from the <a href="http://ffff.at/serious-business">$erious Bu$iness</a> party last month @ Savalas in Williasmburg. We have another one this Thursday, Feb. 28th 2008 &#8212; <a href="http://maps.google.com/maps?q=savalas+nyc&ie=UTF8&ll=40.721112,-74.007168&spn=0.074938,0.162392&z=13&iwloc=A">285 Bedford Ave</a> in Williamsburg.</p>
+
+	<p><p>Disco lazers and djs including Mike McGill, Bennett4Senate, Alex Biederman & myself. <br />
+
+F R E E.<br />
+
+Serious business atire not actually suggested since its a dance party but feel free to surprise us.</p>
+
+
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/mixtapes/" rel="tag">mixtapes</a>, 
+<a href="http://jamiedubs.com/tag/mp3/" rel="tag">mp3</a>, 
+<a href="http://jamiedubs.com/tag/music/" rel="tag">music</a>, 
+<a href="http://jamiedubs.com/tag/politricks/" rel="tag">politricks</a>, 
+<a href="http://jamiedubs.com/tag/serious-business/" rel="tag">serious business</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/mixtape-live-dangerous-savalas-1-30-08" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/mixtape-live-dangerous-savalas-1-30-08#comment"  class="comments_invite">Comment on this</a></span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/internet-famous-on-nbc" title="Permanent link to this article">Internet Famous on&#160;NBC</a></h3>	
+
+
+  
+    <object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/bXwxUwxkhQE&#038;rel=0&#038;color1=0x5d1719&#038;color2=0xcd311b&#038;border=0"></param>
+<param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/bXwxUwxkhQE&#038;rel=0&#038;color1=0x5d1719&#038;color2=0xcd311b&#038;border=0" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object></p>
+
+<p>&#8220;Go forth America&#8230; and get your fame on.&#8221;</p>
+
+<p>Aired on WNBC on Feb. 19th, 2008 <br />
+Check some <a onclick="javascript:urchinTracker ('/outgoing/fffff.at/fuckflickr/if_on_nbc');"  href="http://fffff.at/fuckflickr/if_on_nbc">behind the scenes photos</a> <br />
+Props to interviewed students <a onclick="javascript:urchinTracker ('/outgoing/shannonemigh.com');"  href="http://shannonemigh.com">ShannonEmigh.com</a> and <a onclick="javascript:urchinTracker ('/outgoing/danprovost.com');"  href="http://danprovost.com">DanProvost.com</a> </p>
+
+<p>p.s. we <3 Obama girl <br />
+<img src="http://fffff.at/fuckflickr/data/if_on_nbc/thumb/IMG_0678.JPG" /></p>
+				
+<em>x-post from <a href="http://internetfamo.us/class">famo class blog</a></em>
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/class/" rel="tag">class</a>, 
+<a href="http://jamiedubs.com/tag/famo/" rel="tag">famo</a>, 
+<a href="http://jamiedubs.com/tag/internet-famous/" rel="tag">internet famous</a>, 
+<a href="http://jamiedubs.com/tag/nbc/" rel="tag">nbc</a>, 
+<a href="http://jamiedubs.com/tag/obama-girl/" rel="tag">obama girl</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/internet-famous-on-nbc" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/internet-famous-on-nbc#comment"  class="comments_invite">Comment on this</a> [1]</span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/rickroll-database" title="Permanent link to this article">RickrollDB: never get rickroll&#39;d&#160;again</a></h3>	
+
+
+  
+    	<p>Have you ever clicked what appears to be an awesome link and received a rendition of Rick Astley&#8217;s hit single, &#8220;Never Gonna Give You Up&#8221; instead? You, sir, have been rickrolled.</p>
+
+	<p>Don&#8217;t know what I&#8217;m talking about? Click here:<br />
+
+<a href="http://internetisseriousbusiness.com"><img src="/images/57.gif"></a></p>
+
+	<p>Presenting the #1 weapon in the war on rickrolls: the <a href="http://rickrolldb.com">Rickroll Database</a></p>
+
+	<ul>
+		<li>install Firefox and the <a href="http://adblockplus.org">AdBlock Plus</a> extension, which blocks ads, but not rickrolls</li>
+		<li>subscribe to the <a href="abp://subscribe/?location=http%3A%2F%2Frickrolldb.com%2Fricklist.txt&#38;title=RickrollDB/ricklist.txt">Rickroll blacklist</a></li>
+		<li>no more rickrolls for you my friend</li>
+	</ul>
+
+	<p>There&#8217;s also simple user vetting of the roll-itude of blacklisted URLs; confirm or dispute entries for mad props & fame</p>
+
+	<p><em><br />
+x-posted on the <a href="http://fffff.at/rickroll-database">Free Art & Technology Lab</a><br />
+</em></p>
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/merb/" rel="tag">merb</a>, 
+<a href="http://jamiedubs.com/tag/projects/" rel="tag">projects</a>, 
+<a href="http://jamiedubs.com/tag/rickroll/" rel="tag">rickroll</a>, 
+<a href="http://jamiedubs.com/tag/ruby/" rel="tag">ruby</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/rickroll-database" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"><a href="http://jamiedubs.com/rickroll-database#comment"  class="comments_invite">Comment on this</a> [1]</span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story --><div class="article">
+
+
+
+<h3><a rel="bookmark" href="http://jamiedubs.com/rss-feed-of-your-tumblr-dashboard" title="Permanent link to this article">RSS feed of your Tumblr&#160;dashboard</a></h3>	
+
+
+  
+    	<p><strong>Update 08/15</strong>: code is now on <a href="http://github.com/jamiew/tumblr-dashboard-rss/tree/master">GitHub</a></p>
+
+	<p>Been using the blogging service <a href="http://tumblr.com">Tumblr</a> lately: <a href="http://jamiew.tumblr.com">jamiew.tumblr.com</a> <br />
+
+Very happy with the simplicity (and reblogging!) but disappointed by the lack of <span class="caps">RSS</span> for the dashboard!</p>
+
+	<p>Voil&aacute; a quick Ruby script to login to your Tumblr account, scrape the last 50 posts or so, and output as <span class="caps">RSS</span>. </p>
+
+	<p><big>>> <strong><a href="/files/tumblr-dashboard-rss.rb">tumblr-dashboard-rss.rb</a><br />
+</strong></big></p>
+
+	<p><em>usage:</em>
+	<ul>
+		<li>set the email & password variables</li>
+		<li>put in a cgi-bin on your server, <em>or</em></li>
+	</ul>
+	<ul>
+		<li>use an <span class="caps"><span class="caps">RSS</span></span> reader like Vienna or NetNewsWire that can parse <span class="caps"><span class="caps">RSS</span></span> from a local file</li>
+	</ul></p>
+
+	<p>I&#8217;m avoiding setting this up as service; just wanted to put the code out there.</p>
+  
+	
+  <div class="article_metadata">
+    
+      <span class="tags">Tags: <a href="http://jamiedubs.com/tag/hack/" rel="tag">hack</a>, 
+<a href="http://jamiedubs.com/tag/rss/" rel="tag">rss</a>, 
+<a href="http://jamiedubs.com/tag/scraping/" rel="tag">scraping</a>, 
+<a href="http://jamiedubs.com/tag/tumblr/" rel="tag">tumblr</a></span>
+    
+    <span class="permlink"><a rel="bookmark" href="http://jamiedubs.com/rss-feed-of-your-tumblr-dashboard" title="Permanent link to this article">permalink &#8734;</a></span>
+  <span class="comments"></span>
+  </div>
+
+
+
+
+
+</div> <!-- /.story -->
+    <!-- prevnext -->
+<div class="prevnext">
+
+
+  <div class="prev"><a href="http://jamiedubs.com/?pg=3">Older</a></div>
+  <div class="next"><a href="http://jamiedubs.com/">Newer</a></div>
+
+
+
+</div> <!-- /.prevnext -->
+  
+
+</div> <!-- /#center -->
+
+<!-- footer -->
+<div id="foot">
+
+<div class="floatRight">
+  <img src="/images/copyleft_drips_sm.jpg" alt="F.A.T." title="Free Art & Technology Lab -- R&D in the public domain" /></a>
+</div>
+
+<em>"No money, no copyrights... <a href="http://internetfamo.us">just fame</a>."</em>
+<br />
+Subscribe via <a href="http://jamiedubs.com/rss/" title="RSS Feed">RSS</a> or <a href="http://jamiedubs.com/atom/" title="Atom Feed">Atom</a><br />
+<br />
+<a href="http://creativecommons.org/licenses/by-nc/2.5/">(cc) by-nc</a> unless otherwise noted,<br />
+1995-2009 Jamie Wilkinson<br />
+
+<br /><a href="/contact">Contact</a> &mdash; <a href="/about">About</a><br />
+
+<br /><br />
+<div id="elsewhere">
+<em>elsewhere:</em>
+
+<a href="http://jamiew.tumblr.com">tumblr</a> /
+<a href="http://delicious.com/jamiew">delicious</a> /
+<a href="http://vimeo.com/jamiew">vimeo</a> /
+<a href="http://youtube.com/user/jamiemwilkinson" rel="me">youtube</a> /
+<a href="http://flickr.com/photos/jmw" rel="me">flickr</a>
+<br />
+<a href="http://en.wikipedia.org/wiki/User:Jamiew" rel="me">wikipedia</a> /
+<!-- <a href="http://muxtape.com/remembers/jamiew/" rel="me">muxtape</a> / -->
+<a href="http://www.facebook.com/people/Jamie_Wilkinson/535885320" rel="me">facebook</a> / 
+<a href="http://www.myspace.com/politricks_radio" rel="me">mySpace</a>
+<br />
+<a href="http://digg.com/users/jamiedubs/" rel="me">digg</a> /
+<a href="http://reddit.com/users/jamiew/" rel="me">reddit</a> /
+<a href="http://stumbleupon.com/users/jamiedubs/" rel="me">stumbleupon</a> /
+<br />
+<a href="http://github.com/jamiew" rel="me">github</a> /
+<a href="http://code.google.com/u/jamiemwilkinson/" rel="me">google code</a>
+<br />
+<a href="http://workingwithrails.com/person/5990-jamie-wilkinson" rel="me">working with Rails</a> /
+<!--<a href="http://rubyforge.org/users/jamiew/" rel="me">rubyForge</a> / -->
+<a href="http://sourceforge.net/users/jamie" rel="me">sourceForge</a>
+
+<span style="display: none;"><br />
+<a href="http://mixx.com/users/jamiew/" rel="me">mixx</a>
+<a href="http://jamiew.soup.io" rel="me">soup.io</a> /
+<a href="http://plurk.com/jamiew/" rel="me">plurk</a> /
+<a href="http://pandora.com/people/jamiew" rel="me">pandora</a> /    
+<a href="http://technorati.com/people/technorati/jamiew" rel="me">technorati</a> / 
+<a href="http://openid.claimid.com/jamiew" rel="me">claimid (openid)</a></span>
+
+</div> <!-- /#elsewhere -->
+
+<br /><br /><br /><br />
+
+</div><!-- /#footer -->
+
+</div><!-- /#container -->
+
+<!-- stats -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-96220-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- (external) tumblr iframe -->
+<iframe src="http://www.tumblr.com/dashboard/iframe?src=http%3A%2F%2Fjamiew.tumblr.com%2F" 
+border="0" scrolling="no" width="278" height="25" allowTransparency="true"
+frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px;
+background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe>
+
+</body>
+</html>
