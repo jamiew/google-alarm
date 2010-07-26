@@ -95,7 +95,7 @@ for(var i = 0; i < findCode.length; i++) {
   for(var j = 0; j < findCode[i].length; j++) {
     var scriptMatch = findCode[i][j].toLowerCase(); // look in the page for this
     var urlMatch = findCode[i][j].toLowerCase().replace('url:',''); // look in the doc location for this
-    if( x[0].innerHTML.toLowerCase().indexOf(scriptMatch) != -1 || document.location.href.toLowerCase().indexOf(urlMatch) != -1) {
+    if( (x && x[0].innerHTML.toLowerCase().indexOf(scriptMatch) != -1) || document.location.href.toLowerCase().indexOf(urlMatch) != -1) {
       flagFound[i] = true;
       numFound++;
       anyFound = true;
@@ -105,14 +105,13 @@ for(var i = 0; i < findCode.length; i++) {
 
 // Log that we visited another webpage
 websiteCounters['total'] += 1;
-var writingStats = true; // TODO make this just every N visits
-if(writingStats){ GM_setValue('googlealarm_total', websiteCounters['total']); }
+GM_setValue('googlealarm_total', websiteCounters['total']);
 
 if (anyFound == true) {
 
   // Increment our googcounter
   websiteCounters['hits'] += 1;
-  if(writingStats){ GM_setValue('googlealarm_hits', websiteCounters['hits']); }
+  GM_setValue('googlealarm_hits', websiteCounters['hits']);
 
   // Inject a ghetto javascript fade-function
   var headID = document.getElementsByTagName("head")[0];
