@@ -86,6 +86,8 @@ h2#byline { margin-bottom: 20px; }
 
 #screenshot { background: white; float: right; padding: 0 0 30px 30px; padding-top: 100px; margin-right: -200px; margin-top: 25px;}
 #screenshot img { border: 1px solid #aaa; padding: 2px; }
+#screenshot a img { opacity: 0.8; }
+#screenshot a:hover img { opacity: 1; }
 
 #downloads { }
 .download_box {
