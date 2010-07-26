@@ -18,7 +18,7 @@
 var soundEnabled = true;
 
 // Audio sample storage locations
-// var fileStorage = "chrome://googlealarm/content";
+// No longer used! All assets served as DataURIs
 // var fileStorage = "http://fffff.at/google-alarm/files";
 var fileStorage = "http://localhost/googlealarm/content";
 var soundFiles = fileStorage+'/samples/';
