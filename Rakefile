@@ -17,4 +17,5 @@ desc "Build & deploy files to fffff.at"
 task :deploy => :build do
   sh "rsync -rtzh --progress files/ fffffat@fffff.at:~/fffff.at/google-alarm/files"
   sh "rsync -rtzh --progress *.xpi fffffat@fffff.at:~/fffff.at/google-alarm/"
+  sh "rsync -rtzh --progress website/* jamiew@jamiedubs.com:~/web/public/googlealarm/"
 end
