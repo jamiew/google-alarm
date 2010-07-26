@@ -1,3 +1,7 @@
+/* jamiedubs.com */
+/* Google Alarm */
+
+/* General */
 
 body {
   font-family: sans-serif;
@@ -5,19 +9,30 @@ body {
 	line-height: 13pt;
 }
 
-h1 { padding: 0; font-family: geneva; font-size: 2em;  }
 a img { border: 0; }
+
+h1 { padding: 0; font-family: "century gothic", "geneva", sans-serif; font-size: 2.5em; font-weight: bold; }
+h2 { font-size: 1.8em; color: #999; line-height: 1.2em;}
+
+.centered { text-align: center; }
+
+
+/* Standard page elements */
+
+h1#title { }
+h2#byline { margin-bottom: 20px; }
+#logo{ float: left; margin: -10px 10px 20px 0; }
 
 #left {
 	width: 180px;
-	overflow: hidden;
-	margin-top: 20px;
   float: left;
+	margin-top: 20px;
+	overflow: hidden;
   text-align: right;
 }
 #right {
-	float: left;
 	width: 250px;
+	float: left;
 	padding: 30px;
 }
 
@@ -27,38 +42,10 @@ a img { border: 0; }
   width: 600px;
   padding-top: 10px;
 }
-.embed { font-size: 9pt; color: #555; }
-.embed input { padding: 1px; color: #888; font-size: 8px; background-color: #f6f5f5; width: 200px; }
-.samples {
-  color: #444;
-  font-size: 8pt;
-  line-height: 14pt;
-}
-.in-this-volume { margin-top: 8px; }
-
-#nav {
-  position: absolute;
-  top: 45px;
-  margin-left: -220px;
-}
-#nav a {
-  opacity: 0.4;
-  -moz-border-radius: 6px;
-  font-size: 9pt;
-  background-color: #000;
-  color: #fff;
-  margin-top: 10px;
-  padding: 10px 12px;
-  text-decoration: none;
-}
-#nav a:hover {
-  opacity: 0.6;
-}
 
 .meta {
 	margin: 0;
 	padding: 0;
-/*  text-align: right;*/
 	font-size: 8pt;
 	color: #555;
 }
@@ -73,28 +60,47 @@ a img { border: 0; }
   border-top: 1px solid #efefef;
 }
 
-.centered { text-align: center; }
+#home_link { position: absolute; top: 45px; margin-left: -220px; }
+#home_link a {
+  opacity: 0.4;
+  -moz-border-radius: 6px;
+  font-size: 13px;
+  background-color: #000;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+#home_link a:hover { opacity: 0.6; }
 
+
+/* Custom page elements */
+
+#description {
+  font-size: 110%;
+  padding: 10px 100px 15px 80px;
+  border: 1px solid #efefef;
+  border-left: 0;
+  border-right: 0;
+}
+
+#screenshot { background: white; float: right; padding: 0 0 30px 30px; padding-top: 100px; margin-right: -200px; margin-top: 25px;}
+#screenshot img { border: 1px solid #aaa; padding: 2px; }
+
+#downloads { }
 .download_box {
-  background: #eee;
-  -moz-border-radius: 3px;
-/*  border: 1px solid #aaa;*/
+  background: #eee url(bgimage7jc.png);
+  -moz-border-radius: 5px;
+  border: 1px solid #facafa;
   width: 160px;
-/*  margin: 0px 20px 0 0;*/
-/*  float: right;*/
-  margin: 20px auto;
-  padding: 20px 30px 10px;
+  font-size: 110%;
+  margin: 20px auto 20px;
+  padding: 15px 40px 5px;
 }
 
+.alt-download { width: 300px; margin: 0 auto; }
 
-#screeenshots {
-  width: 800px;
-  margin: 0 auto;
-}
-#screenshots img {
-  width: 100%;
-  border: 1px solid black;
-  margin: 10px 0;
-}
+#screeenshots { width: 800px; margin: 0 auto; }
+#screenshots img { width: 100%; border: 1px solid #aaa; margin: 10px 0; }
 
 
