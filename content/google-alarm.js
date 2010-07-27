@@ -96,6 +96,13 @@ for (var i = 0; i < findCode.length; i++) {
   flagFound[i] = false;
 }
 
+// See if you're using Google Chrome (manual check)
+if(detectChrome()){
+  flagFound[4] = true; // hard-coded
+  numFound++;
+  anyFound = true;
+}
+
 // See if the page contains any of our search strings
 var x = document.getElementsByTagName("html");
 for(var i = 0; i < findCode.length; i++) {
@@ -108,13 +115,6 @@ for(var i = 0; i < findCode.length; i++) {
       anyFound = true;
     }
   }
-}
-
-// See if you're using Google Chrome (manual check)
-if(detectChrome()){
-  flagFound[4] = true; // hard-coded
-  numFound++;
-  anyFound = true;
 }
 
 // Log that we visited another webpage
@@ -157,7 +157,9 @@ if (anyFound == true) {
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
-  top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 2px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
+  if(!detectChrome()){ // GM_get/setValue emulation not working just yet
+    top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 2px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
+  }
   top.innerHTML = top.innerHTML + '<script type="text/javascript">setTimeout("fadeOut(\''+topID+'\')", '+defaultTimeout+');</script>';
   wrapper.appendChild(top);
 
