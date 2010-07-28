@@ -131,7 +131,7 @@ if (anyFound == true) {
   var headID = document.getElementsByTagName("head")[0];
   var newScript = document.createElement('script');
   newScript.type = 'text/javascript';
-  newScript.innerHTML = "{ function fadeOut(el_id) { var el = document.getElementById(el_id); var b = 155; function f() { el.style.background = 'rgb(255,'+(b+=2)+','+(b+=2)+')'; el.style.opacity = -0.7+(255/b); if(b < 200){ setTimeout(f, 5); }else{ el.style.visibility = 'hidden'; } }; f(); } }";
+  newScript.innerHTML = "{ function fadeOut(el_id) { var el = document.getElementById(el_id); var b = 155; function f() { el.style.background = 'rgb(255,'+(b+=2)+','+(b+=2)+')'; el.style.opacity = -0.7+(255/b); if(b < 200){ setTimeout(f, 5); }else{ el.style.display = 'none'; } }; f(); } }";
   headID.appendChild(newScript);
 
   // Create our message div in the top-right
