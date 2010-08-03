@@ -1,0 +1,37 @@
+<html>
+<head>
+<script>
+
+    var targettab = null;
+    
+    function SelectedTab(tab) 
+    {
+
+     detailsObj=new Object();
+     detailsObj.file="google-alarm.js";
+     chrome.tabs.executeScript(tab.id, detailsObj, function(){})
+    
+    }
+
+    function onUpdatedTab(tabid, objectinfo, tab) 
+    {
+       targettab = tab;
+       setTimeout( "SelectedTab(targettab );", 1000); 
+
+    }
+
+    function pageOnClicked(tab) 
+    {
+     detailsObj = new Object();
+     detailsObj.file="checktabs.js";
+
+     chrome.tabs.executeScript(tab.id, detailsObj, function(){})
+ 
+   }
+
+   chrome.tabs.onUpdated.addListener(onUpdatedTab); 
+
+</script>
+</head>
+<body></body>
+</html>
