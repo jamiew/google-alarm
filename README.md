@@ -19,13 +19,13 @@ Make Your Own
 
 This addon is a compiled Greasemonkey script that inspects a document
 for simple signatures left by Google tracking bugs. It then injects
-some HTML, CSS, and javascript into the page, using <audio> for sounds
+some HTML, CSS, and javascript into the page, using &lt;audio&gt; for sounds
 
 To get started modifying it, fire up a terminal:
 
 1. git clone git://github.com/jamiew/google-alarm.git
 2. cd google-alarm
-3. _... d with content/google-alarm.js... _
+3. *edit content/google-alarm.js...*
 4. rake build
 5. rake install
 
