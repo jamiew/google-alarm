@@ -33,7 +33,7 @@ To get started modifying it, fire up a terminal:
 
 sudo gem install rake
 
-* `rake build` will generate a Firefox .xpi by correctly zipping 
+* `rake build` will generate a Firefox .xpi by correctly zipping
   the manifest files & content/ and chrome/ directories
 * `rake install` just does `open -a Firefox google-alarm.xpi`
 * `rake deploy` is what I use to publish the simple website :)
@@ -41,9 +41,9 @@ sudo gem install rake
 Get started modifying **content/google-alarm.js** -- all of the other
 files are basically Greasemonkey support files
 
-For easy, no-recompiling development I recommend installing Greasemonkey, 
+For easy, no-recompiling development I recommend installing Greasemonkey,
 loading the above JS as a userscript and modifying it using GM's
-inline editor. When done, copy back into content/, recompile, and publish! 
+inline editor. When done, copy back into content/, recompile, and publish!
 
 Images and sound are stored as base64-encoded "DataURIs"
 To encode new images or sound fx I recommend using [DataURI Kitchen](http://software.hixie.ch/utilities/cgi/data/data)
@@ -54,14 +54,16 @@ Notes:
   with the large DataURIs generated using WAVs. YMMV
 * The "Chrome version" is really just the google-alarm.js file
   renamed to google-alarm.user.js, and the GM_get/setValue
-   
 
 
-Authors
+
+Contributors
 -----
 
 Jamie Wilkinson | [@jamiew](http://twitter.com/jamiew) | [jamiedubs.com](http://jamiedubs.com)
+Greg Leuch | [@gleuch](http://twitter.com/gleuch) [gleuch.com](http://gleuch.com)
 
-Copyfree 2010 FAT Lab (Free Art & Technology)
 
+Copyfree 2010 Jamie Wilkinson
+Free Art & Technology (FAT) Lab
 [http://fffff.at](http://fffff.at)

@@ -1,4 +1,4 @@
-# Artzilla Browser Builder 1.1
+# Artzilla Addon Builder 1.1
 # http://artzilla.org - http://fffff.at
 #
 # If you don't have rake (ruby make) installed, type:
