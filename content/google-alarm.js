@@ -37,6 +37,49 @@ if(viewport['width'] <= 300 || viewport['height'] <= 300){
   return;
 }
 
+// If we're rolling Chrome, emulate GM_set/getValue()
+// via http://userscripts.org/scripts/review/68559
+if(detectChrome()) {
+  GM_addStyle = function(css) {
+    var style = document.createElement('style');
+    style.textContent = css;
+    document.getElementsByTagName('head')[0].appendChild(style);
+  }
+
+  GM_deleteValue = function(name) {
+    localStorage.removeItem(name);
+  }
+
+  GM_getValue = function(name, defaultValue) {
+    var value = localStorage.getItem(name);
+    if (!value)
+      return defaultValue;
+    var type = value[0];
+    value = value.substring(1);
+    switch (type) {
+      case 'b':
+        return value == 'true';
+      case 'n':
+        return Number(value);
+      default:
+        return value;
+    }
+  }
+
+  GM_log = function(message) {
+    console.log(message);
+  }
+
+   GM_registerMenuCommand = function(name, funk) {
+  //todo
+  }
+
+  GM_setValue = function(name, value) {
+    value = (typeof value)[0] + value;
+    localStorage.setItem(name, value);
+  }
+}
+
 // Initialize site-type counters
 // Reset if you add "?reset_googlealarm=1" to any URL
 if(document.location.href.toLowerCase().indexOf('?reset_googlealarm=1') != -1){
@@ -97,7 +140,8 @@ for (var i = 0; i < findCode.length; i++) {
 }
 
 // See if you're using Google Chrome (manual check)
-if(detectChrome()){
+// Disable for now... too noisy!
+if(false){
   flagFound[4] = true; // hard-coded
   numFound++;
   anyFound = true;
@@ -108,7 +152,7 @@ var x = document.getElementsByTagName("html");
 for(var i = 0; i < findCode.length; i++) {
   for(var j = 0; j < findCode[i].length; j++) {
     var scriptMatch = findCode[i][j].toLowerCase(); // look in the page for this
-    var urlMatch = findCode[i][j].toLowerCase().replace('url:',''); // look in the doc location for this    
+    var urlMatch = findCode[i][j].toLowerCase().replace('url:',''); // look in the doc location for this
     if( (x && x[0].innerHTML.toLowerCase().indexOf(scriptMatch) != -1) || document.location.href.toLowerCase().indexOf(urlMatch) != -1) {
       flagFound[i] = true;
       numFound++;
@@ -157,11 +201,14 @@ if (anyFound == true) {
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
-  if(!detectChrome()){ // GM_get/setValue emulation not working just yet
-    top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 2px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
-  }
-  top.innerHTML = top.innerHTML + '<script type="text/javascript">setTimeout("fadeOut(\''+topID+'\')", '+defaultTimeout+');</script>';
+  top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 2px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
+
+  var fadeScript = document.createElement('script');
+  fadeScript.type = 'text/javascript';
+  fadeScript.innerHTML = 'setTimeout("fadeOut(\''+topID+'\')", '+defaultTimeout+');';
+
   wrapper.appendChild(top);
+  wrapper.appendChild(fadeScript);
 
 
   // process each of our Google detections and add appropriate notification msgs + sounds
@@ -180,9 +227,12 @@ if (anyFound == true) {
       }
 
       var timeout = defaultTimeout - ((i+1) * timeoutLag);
-      msg.innerHTML = msg.innerHTML + '<script type="text/javascript">setTimeout("fadeOut(\''+msgID+'\')", '+timeout+');</script>';
+      var fadeScript = document.createElement('script');
+      fadeScript.type = 'text/javascript';
+      fadeScript.innerHTML = 'setTimeout("fadeOut(\''+msgID+'\')", '+timeout+');';
 
       wrapper.appendChild(msg);
+      wrapper.appendChild(fadeScript);
     }
   }
   ni[0].appendChild(wrapper);
@@ -230,41 +280,3 @@ function detectChrome(){
   return navigator.userAgent.match('Chrome');
 }
 
-
-/* If Greasemonkey is missing, e.g. this is actually Chrome :) */
-/* code by James Campos - via http://userscripts.org/topics/41177 */
-if (typeof GM_getValue == 'undefined') {
-	GM_addStyle = function(css) {
-		var style = document.createElement('style');
-		style.textContent = css;
-		document.getElementsByTagName('head')[0].appendChild(style);
-	};
-	GM_deleteValue = function(name) {
-		localStorage.removeItem(name);
-	};
-	GM_getValue = function(name, defaultValue) {
-		var value = localStorage.getItem(name);
-		if (!value)
-			return defaultValue;
-		var type = value[0];
-		value = value.substring(1);
-		switch (type) {
-			case 'b':
-				return value == 'true';
-			case 'n':
-				return Number(value);
-			default:
-				return value;
-		}
-	};
-	GM_log = function(message) {
-		console.log(message);
-	};
-	 GM_registerMenuCommand = function(name, funk) {
-	//todo
-	};
-	GM_setValue = function(name, value) {
-		value = (typeof value)[0] + value;
-		localStorage.setItem(name, value);
-	};
-}
