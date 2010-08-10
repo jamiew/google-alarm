@@ -23,12 +23,11 @@ task :build do
   sh "cp content/google-alarm.js google-alarm.user.js"
 
   # Nosound version
-  sh "cp content/google-alarm.js google-alarm-nosound.user.js"
   sh "cat content/google-alarm.js | sed 's/soundEnabled = true/soundEnabled = false/' > google-alarm-nosound.user.js"
-  sh 'cp "google-alarm-nosound.user.js" "content/google-alarm.js"'
-  sh "git co content/google-alarm.js" # undo
+  sh 'cp google-alarm-nosound.user.js content/google-alarm.js'
   sh "rm -f google-alarm-nosound.xpi"
   sh "zip google-alarm-nosound.xpi -r chrome chrome.manifest content install.rdf"
+  sh "git co content/google-alarm.js" # undo
 
   # TODO build Safari extension
 
