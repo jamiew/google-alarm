@@ -98,6 +98,8 @@ h2#byline { margin-bottom: 20px; }
   margin: 20px auto 20px;
   padding: 15px 30px 5px;
 }
+.downloads .meta a { color: #555; }
+.downloads .meta a:hover { color: #222; }
 .downloads img.platform { margin-right: 15px; }
 .downloads img.platform.offset { float: left; margin-bottom: 20px; }
 .alt-download { width: 300px; margin: 0 auto; }
