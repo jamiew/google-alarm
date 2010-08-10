@@ -89,17 +89,17 @@ h2#byline { margin-bottom: 20px; }
 #screenshot a img { opacity: 0.8; }
 #screenshot a:hover img { opacity: 1; }
 
-#downloads { }
-.download_box {
+.downloads {
   background: #eee url(bgimage7jc.png);
   -moz-border-radius: 5px;
   border: 1px solid #facafa;
-  width: 160px;
+  width: 260px;
   font-size: 110%;
   margin: 20px auto 20px;
-  padding: 15px 40px 5px;
+  padding: 15px 30px 5px;
 }
-
+.downloads img.platform { margin-right: 15px; }
+.downloads img.platform.offset { float: left; margin-bottom: 20px; }
 .alt-download { width: 300px; margin: 0 auto; }
 
 #screeenshots { width: 800px; margin: 0 auto; }
