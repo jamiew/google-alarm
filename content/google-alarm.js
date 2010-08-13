@@ -201,7 +201,11 @@ if (anyFound == true) {
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
   top.innerHTML = top.innerHTML + '<img height="32" style="margin-top: -8px; margin-left: -10px;" src="'+animatedSiren+'" />';
-  top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 2px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
+  // FIXME - Chrome localStorage only works per-domain -- no browser-wide variable :|
+  if(!detectChrome()){
+    top.innerHTML = top.innerHTML + '<span id="google_alarm_stats" style="display: block; margin-top: 2px;">'+websiteCounters['hits']+" of "+websiteCounters['total']+" websites visited ("+Math.round(parseFloat(websiteCounters['hits']/websiteCounters['total']*100)*10)/10+"%)</span>";
+  }
+
 
   var fadeScript = document.createElement('script');
   fadeScript.type = 'text/javascript';
