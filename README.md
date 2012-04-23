@@ -7,6 +7,8 @@ containing Google Analytics, AdSense, YouTube embeds, and of course,
 when you are using Google products directly (Gmail, google.com, etc).
 All of these send data about you & your browsing habits back to Google.
 
+Available for Firefox, Chrome and Safari. Visit <http://jamiedubs.com/googlealarm> to download.
+
 Code
 ----
 
